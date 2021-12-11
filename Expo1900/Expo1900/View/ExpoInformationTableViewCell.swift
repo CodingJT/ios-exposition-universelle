@@ -8,7 +8,9 @@
 import UIKit
 
 class ExpoInformationTableViewCell: UITableViewCell {
-    static let identifier = String(describing: self)
+    static var identifier: String {
+        return String(describing: Self.self)
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!

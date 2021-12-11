@@ -17,6 +17,22 @@ class ExpoInformationViewController: UIViewController {
     
     func setupTableView() {
         tableView.separatorStyle = .none
+        tableView.dataSource = self
     }
 }
 
+extension ExpoInformationViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identifier = ExpoInformationTableViewCell.identifier
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ExpoInformationTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        return cell
+    }
+}
