@@ -50,6 +50,8 @@ extension ExpoInformationViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        cell.selectionStyle = .none
+        
         if let expoInformation = self.expoInformation {
             let posterImageName = "poster"
             
