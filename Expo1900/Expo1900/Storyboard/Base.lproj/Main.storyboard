@@ -20,6 +20,63 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-Ex-0hS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="A5p-Yk-1fm">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="162"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A5p-Yk-1fm" id="anQ-Y8-Wgp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목 : 파리 만국박람회 1900" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sht-Hd-vKK">
+                                                    <rect key="frame" x="24" y="19" width="366" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AV6-zI-7X6">
+                                                    <rect key="frame" x="24" y="57" width="366" height="0.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방문객 : 12,345,678명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fie-ay-tbM">
+                                                    <rect key="frame" x="24" y="65.5" width="366" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개최지 : 어딘가" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTi-8i-7ON">
+                                                    <rect key="frame" x="24" y="94" width="366" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개최 기간 : 1900.01.01 - 1900.01.02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB7-ah-wRj">
+                                                    <rect key="frame" x="24" y="122.5" width="366" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AV6-zI-7X6" firstAttribute="top" secondItem="Sht-Hd-vKK" secondAttribute="bottom" constant="8" id="9UK-l9-TRA"/>
+                                                <constraint firstItem="fie-ay-tbM" firstAttribute="leading" secondItem="anQ-Y8-Wgp" secondAttribute="leadingMargin" constant="4" id="BG3-bb-RiT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AV6-zI-7X6" secondAttribute="trailing" constant="4" id="Coa-yQ-Beu"/>
+                                                <constraint firstItem="AV6-zI-7X6" firstAttribute="leading" secondItem="anQ-Y8-Wgp" secondAttribute="leadingMargin" constant="4" id="Dqo-iq-Sfd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Sht-Hd-vKK" secondAttribute="trailing" constant="4" id="FrG-cW-HYk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fie-ay-tbM" secondAttribute="trailing" constant="4" id="Ghg-uL-ILt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zB7-ah-wRj" secondAttribute="trailing" constant="4" id="HhS-Kd-D0B"/>
+                                                <constraint firstItem="zB7-ah-wRj" firstAttribute="leading" secondItem="anQ-Y8-Wgp" secondAttribute="leadingMargin" constant="4" id="Ic2-gR-Vgv"/>
+                                                <constraint firstItem="nTi-8i-7ON" firstAttribute="top" secondItem="fie-ay-tbM" secondAttribute="bottom" constant="8" id="Ovz-pt-Jhd"/>
+                                                <constraint firstItem="Sht-Hd-vKK" firstAttribute="leading" secondItem="anQ-Y8-Wgp" secondAttribute="leadingMargin" constant="4" id="Qjh-4E-zru"/>
+                                                <constraint firstItem="Sht-Hd-vKK" firstAttribute="top" secondItem="anQ-Y8-Wgp" secondAttribute="topMargin" constant="8" id="bxS-aX-K65"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nTi-8i-7ON" secondAttribute="trailing" constant="4" id="eM0-06-s9g"/>
+                                                <constraint firstItem="nTi-8i-7ON" firstAttribute="leading" secondItem="anQ-Y8-Wgp" secondAttribute="leadingMargin" constant="4" id="kbH-O0-zrM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zB7-ah-wRj" secondAttribute="bottom" constant="8" id="npt-U0-UJr"/>
+                                                <constraint firstItem="fie-ay-tbM" firstAttribute="top" secondItem="AV6-zI-7X6" secondAttribute="bottom" constant="8" id="qjt-kD-cam"/>
+                                                <constraint firstItem="zB7-ah-wRj" firstAttribute="top" secondItem="nTi-8i-7ON" secondAttribute="bottom" constant="8" id="zGp-VJ-pGc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
