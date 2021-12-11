@@ -38,7 +38,14 @@ class ExpoInformationTableViewCell: UITableViewCell {
     var visitorsCount: Int? {
         didSet {
             guard let visitorsCount = visitorsCount else { return }
-            visitorsCountLabel.text = "방문객 : \(visitorsCount)명"
+            var visitorsCountText: String = String(visitorsCount)
+            
+            let visitorFormatter = NumberFormatter()
+            visitorFormatter.numberStyle = .decimal
+            if let formattedVisitorsCount = visitorFormatter.string(from: NSNumber(integerLiteral: visitorsCount)) {
+                visitorsCountText = formattedVisitorsCount
+            }
+            visitorsCountLabel.text = "방문객 : \(visitorsCountText)명"
         }
     }
     var location: String? {
