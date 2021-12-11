@@ -95,6 +95,9 @@
                             <constraint firstItem="4qh-Ex-0hS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wxi-EW-tqx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="4qh-Ex-0hS" id="wgF-Ti-WG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
