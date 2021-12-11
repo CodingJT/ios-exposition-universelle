@@ -55,12 +55,12 @@ extension ExpoInformationViewController: UITableViewDataSource {
         if let expoInformation = self.expoInformation {
             let posterImageName = "poster"
             
-            cell.durationLabel.text = expoInformation.duration
-            cell.titleLabel.text = expoInformation.title
-            cell.visitorsCountLabel.text = "\(expoInformation.visitors)명"
-            cell.locationLabel.text = expoInformation.location
-            cell.durationLabel.text = expoInformation.duration
-            cell.posterImageView.image = UIImage(named: posterImageName)
+            cell.duration = expoInformation.duration
+            cell.title = expoInformation.title
+            cell.visitorsCount = expoInformation.visitors
+            cell.location = expoInformation.location
+            cell.duration = expoInformation.duration
+            cell.posterImage = UIImage(named: posterImageName)
         }
         
         return cell

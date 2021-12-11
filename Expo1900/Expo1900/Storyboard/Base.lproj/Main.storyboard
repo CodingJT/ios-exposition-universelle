@@ -74,6 +74,7 @@
                                                 <constraint firstItem="fie-ay-tbM" firstAttribute="top" secondItem="AV6-zI-7X6" secondAttribute="bottom" constant="8" id="qjt-kD-cam"/>
                                                 <constraint firstItem="zB7-ah-wRj" firstAttribute="top" secondItem="nTi-8i-7ON" secondAttribute="bottom" constant="8" id="zGp-VJ-pGc"/>
                                             </constraints>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="durationLabel" destination="zB7-ah-wRj" id="ZfP-Cj-5An"/>
