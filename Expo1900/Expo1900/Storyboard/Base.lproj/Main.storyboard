@@ -75,6 +75,13 @@
                                                 <constraint firstItem="zB7-ah-wRj" firstAttribute="top" secondItem="nTi-8i-7ON" secondAttribute="bottom" constant="8" id="zGp-VJ-pGc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="durationLabel" destination="zB7-ah-wRj" id="ZfP-Cj-5An"/>
+                                            <outlet property="locationLabel" destination="nTi-8i-7ON" id="kwR-1N-db7"/>
+                                            <outlet property="posterImageView" destination="AV6-zI-7X6" id="CCY-rB-4Jj"/>
+                                            <outlet property="titleLabel" destination="Sht-Hd-vKK" id="Osp-Ta-Fag"/>
+                                            <outlet property="visitorsCountLabel" destination="fie-ay-tbM" id="LGC-Zt-5fG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
