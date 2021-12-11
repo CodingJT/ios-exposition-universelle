@@ -7,9 +7,16 @@
 import UIKit
 
 class ExpoInformationViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupTableView()
+    }
+    
+    func setupTableView() {
+        tableView.separatorStyle = .none
     }
 }
 
