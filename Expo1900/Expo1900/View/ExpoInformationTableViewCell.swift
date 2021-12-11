@@ -9,4 +9,10 @@ import UIKit
 
 class ExpoInformationTableViewCell: UITableViewCell {
     static let identifier = String(describing: self)
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var visitorsCountLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
 }
