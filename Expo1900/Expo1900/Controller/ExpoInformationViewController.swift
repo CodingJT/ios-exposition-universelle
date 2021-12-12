@@ -41,28 +41,39 @@ class ExpoInformationViewController: UIViewController {
 extension ExpoInformationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = ExpoInformationTableViewCell.identifier
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ExpoInformationTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        cell.selectionStyle = .none
-        
-        if let expoInformation = self.expoInformation {
-            let posterImageName = "poster"
+        if indexPath.row == 0 {
+            let identifier = ExpoInformationTableViewCell.identifier
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ExpoInformationTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
             
-            cell.duration = expoInformation.duration
-            cell.title = expoInformation.title
-            cell.visitorsCount = expoInformation.visitors
-            cell.location = expoInformation.location
-            cell.duration = expoInformation.duration
-            cell.posterImage = UIImage(named: posterImageName)
+            if let expoInformation = self.expoInformation {
+                let posterImageName = "poster"
+                
+                cell.duration = expoInformation.duration
+                cell.title = expoInformation.title
+                cell.visitorsCount = expoInformation.visitors
+                cell.location = expoInformation.location
+                cell.duration = expoInformation.duration
+                cell.posterImage = UIImage(named: posterImageName)
+            }
+            return cell
+        } else {
+            let identifier = DescriptionTableViewCell.identifier
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? DescriptionTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            
+            if let expoInformation = self.expoInformation {
+                cell.descriptionLabel.text = expoInformation.description
+            }
+            return cell
         }
-        
-        return cell
     }
 }
