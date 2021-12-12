@@ -43,6 +43,7 @@ extension ExhibitionItemDetailViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CenterImageTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             cell.centerImageView.image = UIImage(named: exhibitionItem.imageName)
             return cell
         case 1:
@@ -50,6 +51,7 @@ extension ExhibitionItemDetailViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? DescriptionTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             cell.descriptionLabel.text = exhibitionItem.description
             return cell
         default:
