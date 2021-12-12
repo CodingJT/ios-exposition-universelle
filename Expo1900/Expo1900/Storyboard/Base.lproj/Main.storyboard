@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EDM-oi-FmV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CenterImageTableViewCell" id="EDM-oi-FmV" userLabel="Center Image Table View Cell" customClass="CenterImageTableViewCell" customModule="Expo1900" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="160.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EDM-oi-FmV" id="DTf-SN-dGJ">
@@ -291,6 +291,9 @@
                                                 <constraint firstItem="3sJ-wO-p0Y" firstAttribute="width" secondItem="DTf-SN-dGJ" secondAttribute="width" multiplier="1:3" id="wnZ-EM-NXY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="centerImageView" destination="3sJ-wO-p0Y" id="BeB-eg-Whr"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionTableViewCell" id="3U4-Eb-YYw" userLabel="Description Table View Cell" customClass="DescriptionTableViewCell" customModule="Expo1900" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="205" width="414" height="17.5"/>
