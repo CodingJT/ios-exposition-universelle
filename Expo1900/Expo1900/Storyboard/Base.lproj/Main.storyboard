@@ -265,8 +265,20 @@
                     <view key="view" contentMode="scaleToFill" id="Z93-8r-jSR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AIH-bh-Vwt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="x13-68-0qF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AIH-bh-Vwt" firstAttribute="top" secondItem="Z93-8r-jSR" secondAttribute="top" id="I2z-ow-3dH"/>
+                            <constraint firstItem="AIH-bh-Vwt" firstAttribute="leading" secondItem="Z93-8r-jSR" secondAttribute="leading" id="IXR-yr-9FV"/>
+                            <constraint firstAttribute="trailing" secondItem="AIH-bh-Vwt" secondAttribute="trailing" id="o2G-FI-Bhu"/>
+                            <constraint firstAttribute="bottom" secondItem="AIH-bh-Vwt" secondAttribute="bottom" id="oDS-SY-gdI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vLX-gW-DXr"/>
                 </viewController>
