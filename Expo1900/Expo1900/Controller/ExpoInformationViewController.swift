@@ -16,6 +16,7 @@ class ExpoInformationViewController: UIViewController {
         super.viewDidLoad()
         loadExpoInformationData()
         setupTableView()
+        setupNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,15 @@ extension ExpoInformationViewController {
     func setupTableView() {
         tableView.separatorStyle = .none
         tableView.dataSource = self
+    }
+    
+    func setupNavigationBar() {
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground()
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        }
     }
 }
 
