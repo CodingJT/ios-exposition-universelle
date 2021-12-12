@@ -12,5 +12,9 @@ class DescriptionTableViewCell: UITableViewCell {
         return String(describing: Self.self)
     }
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel! {
+        didSet {
+            descriptionLabel.numberOfLines = 0
+        }
+    }
 }
