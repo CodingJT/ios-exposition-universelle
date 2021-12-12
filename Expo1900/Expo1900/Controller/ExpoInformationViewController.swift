@@ -45,35 +45,36 @@ extension ExpoInformationViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let identifier = ExpoInformationTableViewCell.identifier
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ExpoInformationTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
+        guard let identifier = tableViewCellIdentifier(forRowAt: indexPath) else {
+            return UITableViewCell()
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        cell.selectionStyle = .none
+        
+        guard let expoInformation = self.expoInformation else { return cell }
+        
+        if indexPath.row == 0, let cell = cell as? ExpoInformationTableViewCell {
+            let posterImageName = "poster"
             
-            if let expoInformation = self.expoInformation {
-                let posterImageName = "poster"
-                
-                cell.duration = expoInformation.duration
-                cell.title = expoInformation.title
-                cell.visitorsCount = expoInformation.visitors
-                cell.location = expoInformation.location
-                cell.duration = expoInformation.duration
-                cell.posterImage = UIImage(named: posterImageName)
-            }
-            return cell
-        } else {
-            let identifier = DescriptionTableViewCell.identifier
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? DescriptionTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
-            
-            if let expoInformation = self.expoInformation {
-                cell.descriptionLabel.text = expoInformation.description
-            }
-            return cell
+            cell.duration = expoInformation.duration
+            cell.title = expoInformation.title
+            cell.visitorsCount = expoInformation.visitors
+            cell.location = expoInformation.location
+            cell.duration = expoInformation.duration
+            cell.posterImage = UIImage(named: posterImageName)
+        } else if indexPath.row == 1, let cell = cell as? DescriptionTableViewCell {
+            cell.descriptionLabel.text = expoInformation.description
+        }
+        return cell
+    }
+    
+    func tableViewCellIdentifier(forRowAt indexPath: IndexPath) -> String? {
+        guard indexPath.section == 0 else { return nil }
+        switch indexPath.row {
+        case 0: return ExpoInformationTableViewCell.identifier
+        case 1: return DescriptionTableViewCell.identifier
+        default: return nil
         }
     }
 }
