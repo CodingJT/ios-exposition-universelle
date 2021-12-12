@@ -15,8 +15,6 @@ class ExpoInformationTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
             titleLabel.numberOfLines = 0
-            titleLabel.baselineAdjustment = .alignCenters
-            titleLabel.lineBreakMode = .byWordWrapping
         }
     }
     @IBOutlet private weak var posterImageView: UIImageView!
