@@ -33,6 +33,26 @@ extension ExhibitionItemsViewController {
     }
     
     func setupTableView() {
-        tableView.separatorStyle = .none
+        tableView.dataSource = self
+    }
+}
+
+extension ExhibitionItemsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exhibitionItems?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = ExhibitionItemTableViewCell.identifier
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ExhibitionItemTableViewCell else {
+            return UITableViewCell()
+        }
+        guard let exhibitionItem = exhibitionItems?[indexPath.row] else { return cell }
+        
+        cell.titleLabel.text = exhibitionItem.name
+        cell.descriptionLabel.text = exhibitionItem.shortDescription
+        cell.itemImageView.image = UIImage(named: exhibitionItem.imageName)
+        
+        return cell
     }
 }
