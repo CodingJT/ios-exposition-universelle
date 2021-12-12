@@ -35,6 +35,13 @@ extension ExhibitionItemsViewController {
     func setupTableView() {
         tableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ExhibitionItemDetailViewController else { return }
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+        let exhibitionItem = exhibitionItems?[selectedIndexPath.row]
+        destination.exhibitionItem = exhibitionItem
+    }
 }
 
 extension ExhibitionItemsViewController: UITableViewDataSource {
