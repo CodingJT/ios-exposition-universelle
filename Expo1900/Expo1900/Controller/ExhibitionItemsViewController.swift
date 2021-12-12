@@ -17,7 +17,9 @@ class ExhibitionItemsViewController: UIViewController {
         loadExhibitionItemsData()
         setupTableView()
     }
-    
+}
+
+extension ExhibitionItemsViewController {
     func loadExhibitionItemsData() {
         let jsonDecoder = JSONDecoder()
         guard let exhibitionItemsData = NSDataAsset(name: "items") else { return }
