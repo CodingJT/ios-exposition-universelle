@@ -249,6 +249,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="한국의 출품작" id="d6x-hI-J8O"/>
+                    <connections>
+                        <outlet property="tableView" destination="c4a-VJ-HQa" id="sHk-40-HpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deH-OE-Zig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
