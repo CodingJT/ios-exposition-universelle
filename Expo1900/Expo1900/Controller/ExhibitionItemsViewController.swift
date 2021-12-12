@@ -15,6 +15,7 @@ class ExhibitionItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadExhibitionItemsData()
+        setupTableView()
     }
     
     func loadExhibitionItemsData() {
@@ -27,5 +28,9 @@ class ExhibitionItemsViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func setupTableView() {
+        tableView.separatorStyle = .none
     }
 }
