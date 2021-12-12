@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="1758" y="96"/>
         </scene>
-        <!--View Controller-->
+        <!--Exhibition Item Detail View Controller-->
         <scene sceneID="ftV-KN-nRb">
             <objects>
-                <viewController id="Pm8-xD-UWg" sceneMemberID="viewController">
+                <viewController id="Pm8-xD-UWg" customClass="ExhibitionItemDetailViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z93-8r-jSR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
