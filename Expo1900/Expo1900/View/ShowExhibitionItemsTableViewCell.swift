@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol ShowExhibitionItemsTableViewCellDelegate {
+    func showExhibitionItemsButtonTapped(_ sender: UIButton)
+}
+
 class ShowExhibitionItemsTableViewCell: UITableViewCell {
     static var identifier: String {
         return String(describing: Self.self)
     }
     
-    @IBAction func showExhibitionItemsButtonTapped(_ sender: UIButton) {
-        print("\(#function) Executed")
+    var delegate: ShowExhibitionItemsTableViewCellDelegate?
+    
+    @IBAction private func showExhibitionItemsButtonTapped(_ sender: UIButton) {
+        delegate?.showExhibitionItemsButtonTapped(sender)
     }
 }
