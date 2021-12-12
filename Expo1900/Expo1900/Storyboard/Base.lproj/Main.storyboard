@@ -234,6 +234,7 @@
                                             <outlet property="descriptionLabel" destination="KPE-Xw-0Qi" id="fML-Sn-DIl"/>
                                             <outlet property="itemImageView" destination="xP8-Tv-C2h" id="aIm-Wb-qwU"/>
                                             <outlet property="titleLabel" destination="RCU-Yo-bly" id="Zz4-tF-rgi"/>
+                                            <segue destination="Pm8-xD-UWg" kind="show" id="bZq-qe-WZe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -256,6 +257,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deH-OE-Zig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1758" y="96"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ftV-KN-nRb">
+            <objects>
+                <viewController id="Pm8-xD-UWg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z93-8r-jSR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x13-68-0qF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vLX-gW-DXr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJJ-pw-bsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2649" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Veb-ve-j8g">
