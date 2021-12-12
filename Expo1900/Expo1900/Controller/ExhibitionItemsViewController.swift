@@ -34,6 +34,7 @@ extension ExhibitionItemsViewController {
     
     func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,5 +62,11 @@ extension ExhibitionItemsViewController: UITableViewDataSource {
         cell.itemImageView.image = UIImage(named: exhibitionItem.imageName)
         
         return cell
+    }
+}
+
+extension ExhibitionItemsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
