@@ -117,7 +117,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mnd-ox-iTy">
-                                                    <rect key="frame" x="78.5" y="0.0" width="257" height="36.5"/>
+                                                    <rect key="frame" x="86" y="0.0" width="242" height="36.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-Jf-tos">
                                                             <rect key="frame" x="0.0" y="0.5" width="36" height="36"/>
@@ -127,15 +127,15 @@
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giO-OQ-WDc">
-                                                            <rect key="frame" x="52" y="3" width="153" height="31"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="한국의 출품작 보러가기"/>
+                                                            <rect key="frame" x="52" y="3.5" width="138" height="30"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="한국의 출품작 보러가기"/>
                                                             <connections>
                                                                 <action selector="showExhibitionItemsButtonTapped:" destination="7Gr-kZ-WiP" eventType="touchUpInside" id="Qvl-EK-qKC"/>
                                                             </connections>
                                                         </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-C8-9cN">
-                                                            <rect key="frame" x="221" y="0.5" width="36" height="36"/>
+                                                            <rect key="frame" x="206" y="0.5" width="36" height="36"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="uYJ-C8-9cN" secondAttribute="height" multiplier="1:1" id="sXG-Ca-IWq"/>
                                                                 <constraint firstAttribute="width" constant="36" id="wCs-XM-aGC"/>

@@ -54,17 +54,22 @@ extension ExpoInformationViewController: UITableViewDataSource {
         
         guard let expoInformation = self.expoInformation else { return cell }
         
-        if indexPath.row == 0, let cell = cell as? ExpoInformationTableViewCell {
+        switch indexPath.row {
+        case 0:
+            guard let expoInformationCell = cell as? ExpoInformationTableViewCell else { return cell }
             let posterImageName = "poster"
             
-            cell.duration = expoInformation.duration
-            cell.title = expoInformation.title
-            cell.visitorsCount = expoInformation.visitors
-            cell.location = expoInformation.location
-            cell.duration = expoInformation.duration
-            cell.posterImage = UIImage(named: posterImageName)
-        } else if indexPath.row == 1, let cell = cell as? DescriptionTableViewCell {
-            cell.descriptionLabel.text = expoInformation.description
+            expoInformationCell.duration = expoInformation.duration
+            expoInformationCell.title = expoInformation.title
+            expoInformationCell.visitorsCount = expoInformation.visitors
+            expoInformationCell.location = expoInformation.location
+            expoInformationCell.duration = expoInformation.duration
+            expoInformationCell.posterImage = UIImage(named: posterImageName)
+        case 1:
+            guard let descriptionCell = cell as? DescriptionTableViewCell else { return cell }
+            descriptionCell.descriptionLabel.text = expoInformation.description
+        default:
+            break
         }
         return cell
     }
@@ -74,6 +79,7 @@ extension ExpoInformationViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0: return ExpoInformationTableViewCell.identifier
         case 1: return DescriptionTableViewCell.identifier
+        case 2: return ShowExhibitionItemsTableViewCell.identifier
         default: return nil
         }
     }
