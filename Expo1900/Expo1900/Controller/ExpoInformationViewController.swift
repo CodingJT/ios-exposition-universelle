@@ -80,9 +80,6 @@ extension ExpoInformationViewController: UITableViewDataSource {
         case 1:
             guard let descriptionCell = cell as? DescriptionTableViewCell else { return cell }
             descriptionCell.descriptionLabel.text = expoInformation.description
-        case 2:
-            guard let showExhibitionCell = cell as? ShowExhibitionItemsTableViewCell else { return cell }
-            showExhibitionCell.delegate = self
         default:
             break
         }
@@ -97,11 +94,5 @@ extension ExpoInformationViewController: UITableViewDataSource {
         case 2: return ShowExhibitionItemsTableViewCell.identifier
         default: return nil
         }
-    }
-}
-
-extension ExpoInformationViewController: ShowExhibitionItemsTableViewCellDelegate {
-    func showExhibitionItemsButtonTapped(_ sender: UIButton) {
-        print("\(#function) executed")
     }
 }
