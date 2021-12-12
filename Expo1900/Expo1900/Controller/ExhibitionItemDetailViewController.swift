@@ -8,5 +8,18 @@
 import UIKit
 
 class ExhibitionItemDetailViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
+    var exhibitionItem: ExhibitionItem?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupTableView()
+    }
+}
+
+extension ExhibitionItemDetailViewController {
+    func setupTableView() {
+        tableView.separatorStyle = .none
+    }
 }
