@@ -109,6 +109,47 @@
                                             <outlet property="descriptionLabel" destination="Mje-iV-Crj" id="c2q-RY-9sH"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7Gr-kZ-WiP">
+                                        <rect key="frame" x="0.0" y="208" width="414" height="36.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Gr-kZ-WiP" id="2cs-9J-ArX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="36.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mnd-ox-iTy">
+                                                    <rect key="frame" x="78.5" y="0.0" width="257" height="36.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-Jf-tos">
+                                                            <rect key="frame" x="0.0" y="0.5" width="36" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="36" id="dH0-Ta-vJC"/>
+                                                                <constraint firstAttribute="width" secondItem="ELk-Jf-tos" secondAttribute="height" multiplier="1:1" id="vHk-Kw-Kl3"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giO-OQ-WDc">
+                                                            <rect key="frame" x="52" y="3" width="153" height="31"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="한국의 출품작 보러가기"/>
+                                                        </button>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-C8-9cN">
+                                                            <rect key="frame" x="221" y="0.5" width="36" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="uYJ-C8-9cN" secondAttribute="height" multiplier="1:1" id="sXG-Ca-IWq"/>
+                                                                <constraint firstAttribute="width" constant="36" id="wCs-XM-aGC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mnd-ox-iTy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2cs-9J-ArX" secondAttribute="leading" priority="750" constant="20" id="2bX-fB-D75"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mnd-ox-iTy" secondAttribute="trailing" priority="750" constant="20" id="hvk-9T-oeO"/>
+                                                <constraint firstAttribute="bottom" secondItem="mnd-ox-iTy" secondAttribute="bottom" id="q1Y-je-kR3"/>
+                                                <constraint firstItem="mnd-ox-iTy" firstAttribute="top" secondItem="2cs-9J-ArX" secondAttribute="top" id="thT-p3-qYY"/>
+                                                <constraint firstItem="mnd-ox-iTy" firstAttribute="centerX" secondItem="2cs-9J-ArX" secondAttribute="centerX" id="vym-11-IYJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -131,6 +172,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flag" width="851" height="567"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
