@@ -37,25 +37,36 @@ extension ExhibitionItemDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let exhibitionItem = exhibitionItem else { return UITableViewCell() }
+        guard let cellIdentifier = tableViewCellIdentifier(forRowAt: indexPath) else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        cell.selectionStyle = .none
+   
         switch indexPath.row {
         case 0:
-            let cellIdentifier = CenterImageTableViewCell.identifier
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CenterImageTableViewCell else {
-                return UITableViewCell()
+            guard let centerImageCell = cell as? CenterImageTableViewCell else {
+                return cell
             }
-            cell.selectionStyle = .none
-            cell.centerImageView.image = UIImage(named: exhibitionItem.imageName)
-            return cell
+            centerImageCell.centerImageView.image = UIImage(named: exhibitionItem.imageName)
         case 1:
-            let cellIdentifier = DescriptionTableViewCell.identifier
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? DescriptionTableViewCell else {
+            guard let descriptionCell = cell as? DescriptionTableViewCell else {
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
-            cell.descriptionLabel.text = exhibitionItem.description
-            return cell
+            descriptionCell.descriptionLabel.text = exhibitionItem.description
         default:
-            return UITableViewCell()
+            break
+        }
+        return cell
+    }
+    
+    func tableViewCellIdentifier(forRowAt indexPath: IndexPath) -> String? {
+        guard indexPath.section == 0 else { return nil }
+        switch indexPath.row {
+        case 0:
+            return CenterImageTableViewCell.identifier
+        case 1:
+            return DescriptionTableViewCell.identifier
+        default:
+            return nil
         }
     }
 }
