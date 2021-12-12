@@ -14,6 +14,7 @@ class ExhibitionItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationTitle()
         setupTableView()
     }
 }
@@ -21,5 +22,9 @@ class ExhibitionItemDetailViewController: UIViewController {
 extension ExhibitionItemDetailViewController {
     func setupTableView() {
         tableView.separatorStyle = .none
+    }
+    
+    func setupNavigationTitle() {
+        navigationItem.title = exhibitionItem?.name
     }
 }
