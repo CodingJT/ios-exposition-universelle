@@ -18,6 +18,18 @@ class ExpoInformationViewController: UIViewController {
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+}
+
+extension ExpoInformationViewController {
     func loadExpoInformationData() {
         let decoder = JSONDecoder()
         guard let expoInformationData = NSDataAsset(name: "exposition_universelle_1900") else {
