@@ -8,6 +8,10 @@
 import UIKit
 
 class ExhibitionItemTableViewCell: UITableViewCell {
+    static var identifier: String {
+        return String(describing: Self.self)
+    }
+    
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
             titleLabel.numberOfLines = 0
