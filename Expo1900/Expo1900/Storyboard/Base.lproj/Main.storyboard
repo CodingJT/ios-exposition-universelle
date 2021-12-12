@@ -206,13 +206,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oix-67-DUv" userLabel="Vertical Stack View">
                                                             <rect key="frame" x="64" y="0.5" width="292.5" height="50.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCU-Yo-bly">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCU-Yo-bly">
                                                                     <rect key="frame" x="0.0" y="0.0" width="292.5" height="30"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPE-Xw-0Qi">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPE-Xw-0Qi">
                                                                     <rect key="frame" x="0.0" y="30" width="292.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                                     <nil key="textColor"/>
@@ -243,7 +243,7 @@
                             <constraint firstItem="c4a-VJ-HQa" firstAttribute="top" secondItem="HnC-rI-CYK" secondAttribute="top" id="lAi-2g-ZhS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="한국의 출품작" largeTitleDisplayMode="never" id="d6x-hI-J8O"/>
+                    <navigationItem key="navigationItem" title="한국의 출품작" id="d6x-hI-J8O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="deH-OE-Zig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
